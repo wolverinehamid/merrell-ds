@@ -1,1 +1,0 @@
-web: node run pl:serve
