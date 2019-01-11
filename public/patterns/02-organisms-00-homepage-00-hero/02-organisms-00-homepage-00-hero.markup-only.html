@@ -55,13 +55,68 @@
             font-size: 6em;
           }
         </style>
+        <li class="slide slide--winter">
+          <a href="$url('Search-Show', 'cgid', 'winter-gear', 'icid', 'homepage-primary1-wintergear011019')$">
+            <div class="layer layer--0 layer--full"></div>
+            <div class="layer layer--1" style="top: 49%;">
+              <div class="slide-hdr">
+                Make Winter Your Wonderland
+              </div>
+            </div>
+            <div class="layer layer--2 layer--full"></div>
+          </a>
+          <div class="layer layer--3 layer--last">
+            <a href="$url('Search-Show', 'cgid', 'winter-gear', 'icid', 'homepage-primary1-wintergear011019')$" class="mrrl-cta slide-cta">
+              Shop Now
+            </a>
+          </div>
+        </li>
+        <style media="screen">
+          .layer.layer--0.layer--full {
+            background-position: center center;
+            background-size: cover;
+          }
+
+          .slide--winter .layer.layer--0.layer--full {
+            background-image: url("https://staging-na-wwwinc.demandware.net/on/demandware.static/-/Sites-merrell_us-Library/default/dw98f5ef07/content/seasonal-content/homepage/2019/01/winter_gear_hp_slide_desktop.jpg");
+          }
+
+          .flexslider--home-main .slide--winter .slide-hdr {
+            font-size: 6em;
+          }
+
+          .flexslider--home-main .slide--winter .layer--1 {
+            width: 100%;
+          }
+
+          .flexslider--home-main .slide--winter .layer--3 {
+            top: 84%;
+          }
+
+          .flexslider--home-main .slide--winter .slide-hdr {
+            font-size: 46px;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+          }
+
+          .slide--winter .layer.layer--3 {
+            top: 74%;
+          }
+
+          .flexslider--home-main .slide--winter .layer--3 .mrrl-cta {
+            padding: 20px 0;
+            background-color: black;
+          }
+
+          .flexslider--home-main .slide--winter .layer--3 .mrrl-cta:hover {
+            background-color: #dc4405;
+          }
+        </style>
 
       </ul>
       <ul class="flexslider-nav">
         <li class="flexslider-nav__dot"><span class="mrrl-sr">0</span></li>
         <li class="flexslider-nav__dot"><span class="mrrl-sr">1</span></li>
-        <li class="flexslider-nav__dot"><span class="mrrl-sr">2</span></li>
-        <li class="flexslider-nav__dot"><span class="mrrl-sr">3</span></li>
       </ul>
       <div class="flexslider-arrows"></div>
     </div>
@@ -518,4 +573,75 @@
     -webkit-filter: alpha(opacity=60);
     filter: alpha(opacity=60);
   }
+
+  .flexslider--home-main .slide-hdr,
+  .flexslider--home-main .slide-subhdr {
+    margin-top: 0;
+    margin-bottom: 0.5;
+    font-family: "Tungsten Medium", "Tungsten-Medium", "Knockout 47 A", "Knockout 47 B", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-transition: all 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
+  }
 </style>
+<script inline="">
+  (function e(t, n, r) {
+    function s(o, u) {
+      if (!n[o]) {
+        if (!t[o]) {
+          var a = typeof require == "function" && require;
+          if (!u && a) return a(o, !0);
+          if (i) return i(o, !0);
+          throw new Error("Cannot find module '" + o + "'");
+        }
+        var f = (n[o] = {
+          exports: {}
+        });
+        t[o][0].call(
+          f.exports,
+          function(e) {
+            var n = t[o][1][e];
+            return s(n ? n : e);
+          },
+          f,
+          f.exports,
+          e,
+          t,
+          n,
+          r
+        );
+      }
+      return n[o].exports;
+    }
+    var i = typeof require == "function" && require;
+    for (var o = 0; o < r.length; o++) s(r[o]);
+    return s;
+  })({
+      1: [
+        function(require, module, exports) {
+          "use strict";
+          jQuery(function($) {
+            $(".flexslider--home-main").flexslider({
+              animation: "fade",
+              slideshowSpeed: 7000,
+              animationSpeed: 900,
+              selector: ".slides > li",
+              directionNav: true,
+              touch: true,
+              prevText: "",
+              nextText: "",
+              controlsContainer: ".flexslider-arrows",
+              manualControls: ".flexslider-nav__dot",
+              multipleKeyboard: false,
+              isFirefox: true
+            });
+          });
+        },
+        {}
+      ]
+    }, {},
+    [1]
+  );
+</script>
