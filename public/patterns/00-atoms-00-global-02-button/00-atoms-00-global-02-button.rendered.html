@@ -25,29 +25,31 @@
 
 <body class="body">
 
-  <ul class="sg-colors">
-    <li>
-      <span class="sg-swatch" style="background: #DC4405;"></span>
-      <span class="sg-label">
-        $color-brand-orange <br />
-        #DC4405
-      </span>
-    </li>
-    <li>
-      <span class="sg-swatch" style="background: #101820;"></span>
-      <span class="sg-label">
-        $color-brand-black <br />
-        #101820
-      </span>
-    </li>
-    <li>
-      <span class="sg-swatch" style="background: #F1F1F2;"></span>
-      <span class="sg-label">
-        $color-brand-white <br />
-        #F1F1F2
-      </span>
-    </li>
-  </ul>
+  <a href="#" class="mrrl-cta ">Button</a>
+  <style>
+    .mrrl-cta {
+    background-color: #dc4405;
+    color: #fff;
+    padding: 20px 30px;
+    border: none;
+    min-width: 165px;
+    font-family: "GT-Pressura", "Knockout 31 A", "Knockout 31 B", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 400;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1em;
+    letter-spacing: 0.025em;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .mrrl-cta:hover {
+    background-color: #333;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+  }
+</style>
   <!--DO NOT REMOVE-->
   <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
     {
@@ -65,8 +67,8 @@
         "patternSubtype": "global"
       },
       "patternExtension": "mustache",
-      "patternName": "Brand Colors",
-      "patternPartial": "atoms-brand-colors",
+      "patternName": "Button",
+      "patternPartial": "atoms-button",
       "patternState": "",
       "patternEngineName": "mustache",
       "extraOutput": {}
