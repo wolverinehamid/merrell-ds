@@ -1,98 +1,141 @@
 <!DOCTYPE html>
 <html class="pl">
-  <head>
-    <title>Pattern Lab</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
-    
-    <link rel="stylesheet" href="../../css/style.css?1547133960182" media="all" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1547133960182" media="all" />
-    
-    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-    
-    <!-- End Pattern Lab -->
-  
-  </head>
-  <body class="body">
-    
-<ul class="sg-colors">
-		<li>
-		<span class="sg-swatch" style="background: #5C832F;"></span>
-		<span class="sg-label">
-			$color-brand-green <br />
-			#5C832F
-		</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #3b4a20;"></span>
-		<span class="sg-label">
-			$color-brand-green-dark <br />
-			#3b4a20
-		</span>
-	</li>
-</ul>
-  
+
+<head>
+  <title>Pattern Lab</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1547229039496" media="all" />
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+  <!-- never cache patterns -->
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1547229039496" media="all">
+  <link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1547229039496" media="all" />
+
+  <!-- End Pattern Lab -->
+
+</head>
+
+<body class="body">
+
+  <ul class="sg-colors">
+    <li>
+      <span class="sg-swatch" style="background: #DC4405;"></span>
+      <span class="sg-label">
+        $color-brand-orange <br />
+        #DC4405
+      </span>
+    </li>
+    <li>
+      <span class="sg-swatch" style="background: #101820;"></span>
+      <span class="sg-label">
+        $color-brand-black <br />
+        #101820
+      </span>
+    </li>
+    <li>
+      <span class="sg-swatch" style="background: #F1F1F2;"></span>
+      <span class="sg-label">
+        $color-brand-white <br />
+        #F1F1F2
+      </span>
+    </li>
+  </ul>
   <!--DO NOT REMOVE-->
-  <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
-  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<p>This color palette contains HikeTracker-specific colors to be used throughout the interface.</p>\n","patternBreadcrumb":{"patternType":"atoms","patternSubtype":"global"},"patternExtension":"mustache","patternName":"Brand Colors","patternPartial":"atoms-brand-colors","patternState":"","patternEngineName":"mustache","extraOutput":{}}
-</script>
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": false,
+      "patternDesc": "<p>[Insert description here]</p>\n",
+      "patternBreadcrumb": {
+        "patternType": "atoms",
+        "patternSubtype": "global"
+      },
+      "patternExtension": "mustache",
+      "patternName": "Brand Colors",
+      "patternPartial": "atoms-brand-colors",
+      "patternState": "",
+      "patternEngineName": "mustache",
+      "extraOutput": {}
+    }
+  </script>
 
-<script>
-  /*!
-   * scriptLoader - v0.1
-   *
-   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
-   * Licensed under the MIT license
-   *
-   */
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
 
-  var scriptLoader = {
+    var scriptLoader = {
 
-    run: function(js,cb,target) {
-      var s  = document.getElementById(target+'-'+cb);
-      for (var i = 0; i < js.length; i++) {
-        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
-        var c   = document.createElement('script');
-        c.src   = '../../'+src+'?'+cb;
-        if (typeof js[i] != 'string') {
-          if (js[i].dep !== undefined) {
-            c.onload = function(dep,cb,target) {
-              return function() {
-                scriptLoader.run(dep,cb,target);
-              }
-            }(js[i].dep,cb,target);
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
           }
+          s.parentNode.insertBefore(c, s);
         }
-        s.parentNode.insertBefore(c,s);
       }
+
     }
+  </script>
 
-  }
-</script>
+  <script id="pl-js-polyfill-insert-1547229039496">
+    (function() {
+      if (self != top) {
+        var cb = '1547229039496';
+        var js = [];
+        if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+          js.push('styleguide/bower_components/classList.min.js');
+        }
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
 
-<script id="pl-js-polyfill-insert-1547133960182">
-  (function() {
-    if (self != top) {
-      var cb = '1547133960182';
-      var js = [];
-      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
-    }
-  })();
-</script>
+  <script id="pl-js-insert-1547229039496">
+    (function() {
+      if (self != top) {
+        var cb = '1547229039496';
+        var js = [{
+          'src': 'styleguide/bower_components/jwerty.min.js',
+          'dep': ['styleguide/js/patternlab-pattern.min.js']
+        }];
+        scriptLoader.run(js, cb, 'pl-js-insert');
+      }
+    })();
+  </script>
 
-<script id="pl-js-insert-1547133960182">
-  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
-  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
-  (function() {
-    if (self != top) {
-      loadJS('../../styleguide/js/patternlab-pattern.js');
-    }
-  })();
-</script>
+  <script src="../../js/pl-source-vendor.js?1547229039496"></script>
+  <script src="../../js/pl-source.js?1547229039496"></script>
 
-  <script type="text/javascript" src="/js/nav.js"></script>
-  <script type="text/javascript" src="/js/progress.js"></script>
-  <script type="text/javascript" src="/js/overlay.js"></script>
-  </body>
+</body>
+
 </html>
